@@ -1,8 +1,13 @@
 import cherrypy
 import os
+from mako.template import Template
+
+
 class HelloWorld(object):
     def index(self):
-        return "Hello World! This works amazingly"
+        mytemplate = Template(filename='index.html')
+        return mytemplate.render()
+        
     index.exposed = True
 
 cherrypy.config.update({'server.socket_host': '0.0.0.0',})
