@@ -2,7 +2,7 @@ import cherrypy
 import os
 class HelloWorld(object):
     def index(self):
-        return "Hello World!"
+        return "Hello World! This works amazingly"
     index.exposed = True
 
 cherrypy.config.update({'server.socket_host': '0.0.0.0',})
